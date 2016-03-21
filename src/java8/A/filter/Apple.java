@@ -1,4 +1,4 @@
-package A.filter;
+package java8.A.filter;
 
 class Apple {
 	String color;

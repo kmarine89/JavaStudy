@@ -1,4 +1,4 @@
-package B.observer;
+package pattern.B.observer;
 
 public class Main {
 
