@@ -5,6 +5,15 @@ public class AnimalFactory {
 		if(animalName == null) {
 			throw new IllegalArgumentException("null은 안되용~");
 		}
+		try {
+			Class<?> c = Class.forName(animalName);
+			return (Animal) c.newInstance();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		return null;
+		
+		/*
 		if(animalName.equals("소")) {
 			return new Cow();
 		} else if(animalName.equals("고양이")) {
@@ -14,5 +23,6 @@ public class AnimalFactory {
 		} else {
 			return null;
 		}
+		*/
 	}
 }
